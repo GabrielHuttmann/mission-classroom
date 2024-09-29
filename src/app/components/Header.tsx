@@ -13,15 +13,15 @@ import '../globals.css';
 
 function Header() {
   // Estado para controlar qual imagem exibir
-  const [logo, setLogo] = useState(staticLogo);
+  const [logo, setLogo] = useState(staticLogo.src);
 
     // Funções para mudar a imagem no hover
     const handleMouseEnter = () => {
-      setLogo(animatedLogo); // Muda para o GIF quando o mouse entra
+      setLogo(animatedLogo.src); // Muda para o GIF quando o mouse entra
     };
   
     const handleMouseLeave = () => {
-      setLogo(staticLogo); // Volta para a imagem estática quando o mouse sai
+      setLogo(staticLogo.src); // Volta para a imagem estática quando o mouse sai
     };
 
   return (
@@ -49,9 +49,9 @@ function Header() {
       </div>
       
       <div className="top-bar__right" style={{ display: 'flex', alignItems: 'center' }}>
-      <img src={iconPlus} alt="Classroom addition" className="icon iconPlus" />
-      <img src={iconMore} alt="Icon with all the other Google Apps" className="icon iconMore" />
-      <img src={userAvatar} alt="User Avatar" className="avatar" />
+      <img src={iconPlus.src} alt="Classroom addition" className="icon iconPlus" />
+      <img src={iconMore.src} alt="Icon with all the other Google Apps" className="icon iconMore" />
+      <img src={userAvatar.src} alt="User Avatar" className="avatar" />
 
       </div>
     </header>
