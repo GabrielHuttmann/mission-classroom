@@ -112,7 +112,7 @@
 .main-content {
   margin-left: 80px; /* Espaço reduzido para a nova largura da barra lateral */
   padding-top: 300px; /* Espaçamento para a barra superior */
-  padding: 100px;
+  padding: 120px 10px 30px 60px;
   background-color: #fff;
   min-height: 100vh;
 }
@@ -158,5 +158,10 @@
 .nome:hover {
 text-decoration: underline; /* Sublinhado ao passar o mouse, se desejar */
 color: #1e8e3e; /* Muda para um azul similar ao Google */
+}
+
+.classes-container {
+  display: flex;
+  flex-wrap: wrap;
 }
 

@@ -62,7 +62,9 @@ export default function Home() {
       <Sidebar /> {/* Barra lateral */}
       
       <main className="main-content">
-        {renderElement()}
+        <div className="classes-container">
+          {renderElement()}
+        </div>
       </main>
     </div>
   );
