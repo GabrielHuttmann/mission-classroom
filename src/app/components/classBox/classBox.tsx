@@ -48,14 +48,18 @@ export default function ClassBox({
       </div>
       <div className={styles.middlePart}>
         <img src={userImageSrc} alt="" className={styles.image} />
-        <div>{assignments.map((assignment) => {
+        <div>{assignments && assignments.length > 0 ? (
+          assignments.map((assignment) => {
             return (
-                <div key={assignment.id}>
-                    <div className={styles.assignmentTopLabel}>{assignment.topLabel}</div>
-                    <div className={styles.assignmentBottomLabel}>{assignment.bottomLabel}</div>
-                </div>
+              <div key={assignment.id}>
+                <div className={styles.assignmentTopLabel}>{assignment.topLabel}</div>
+                <div className={styles.assignmentBottomLabel}>{assignment.bottomLabel}</div>
+              </div>
             );
-        })}</div>
+          })
+        ) : (
+          <></>
+        )}</div>
       </div>
       <div className={styles.bottomPart}>
         <div className={styles.icon}>
