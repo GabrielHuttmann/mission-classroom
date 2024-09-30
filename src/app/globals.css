@@ -122,7 +122,7 @@
   position: absolute; /* Posicionamento absoluto */
   top: 15px; /* Distância do topo */
   left: 107px; /* Distância da esquerda */
-  width: 43px ; /* Reduz o tamanho do logo */
+  width: 43px; /* Reduz o tamanho do logo */
   height: auto ; /* Mantém a proporção da imagem */
   transition: transform 0.3s ease; /* Animação de transição */
   cursor: pointer; /* Mão ao passar o mouse */
@@ -134,7 +134,6 @@
   height: auto; /* Mantém a proporção da altura */
   margin-left: -50px; /* Ajuste o valor conforme necessário para empurrar para a esquerda */
   top: -25px; /* Ajuste este valor para mover mais acima */
-
 }
 
 

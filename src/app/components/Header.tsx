@@ -32,7 +32,7 @@ function Header() {
       <img 
           src={logo} 
           alt="Logo" 
-          className={`logo ${logo === animatedLogo ? 'gif-logo' : ''}`} // Aplica a classe apenas se for o GIF
+          className={`logo ${logo === animatedLogo.src ? 'gif-logo' : ''}`} // Aplica a classe apenas se for o GIF
           onMouseEnter={handleMouseEnter} // Adiciona o evento onMouseEnter
           onMouseLeave={handleMouseLeave} // Adiciona o evento onMouseLeave
         />
