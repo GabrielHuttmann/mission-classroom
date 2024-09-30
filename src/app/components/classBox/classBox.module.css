@@ -23,17 +23,18 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
     padding: 16px 16px 12px;
+    height: 100px;
+    box-sizing: border-box;
     position: relative;
     color: white;
-    gap: 5px;
     background: linear-gradient(60deg, rgba(32, 33, 36, 0) 60%, rgba(32, 33, 36, .88));
     opacity: .88;
 
     & h2 {
         display: flex;
         position: relative;
+        margin: 0;
 
         & a {
             text-overflow: ellipsis;
@@ -62,6 +63,7 @@
 
 .description, .classGroup {
     font-size: 13px;
+    line-height: 20px;
 }
 
 .labelSpacing {
@@ -150,6 +152,7 @@
     overflow: hidden;
     white-space: nowrap;
     display: block;
+    font-weight: normal;
 }
 
 .classGroupSpacing {
