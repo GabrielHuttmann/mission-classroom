@@ -37,7 +37,7 @@ export default function Home() {
       }
   };
   
-  const renderElement = () => {
+  const renderClassBoxComponent = () => {
     return (
       <>
         {classroomObject.map((classroomObject: ClassroomObject) => (
@@ -55,7 +55,6 @@ export default function Home() {
     );
   }
 
-
   return (
     <div className="App">
       <Header />  {/* Barra superior */}
@@ -63,7 +62,7 @@ export default function Home() {
       
       <main className="main-content">
         <div className="classes-container">
-          {renderElement()}
+          {renderClassBoxComponent()}
         </div>
       </main>
     </div>
