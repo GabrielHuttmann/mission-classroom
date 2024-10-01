@@ -4,14 +4,13 @@ import { useState } from 'react';
 import animatedLogo from '../../assets/10th_anniversary.gif'; // Imagem GIF
 import staticLogo from '../../assets/10th_anniversary.png'; // Importa o logo do arquivo
 import iconMore from '../../assets/al-icon.png';
-import userAvatar from '../../assets/aventurine.png'; // Importa a imagem do avatar
 import iconPlus from '../../assets/plus-icon.png';
 import '../globals.css';
 
 
 
 
-function Header() {
+function Header({profileImageSrc}: {profileImageSrc: string}) {
   // Estado para controlar qual imagem exibir
   const [logo, setLogo] = useState(staticLogo.src);
 
@@ -51,7 +50,7 @@ function Header() {
       <div className="top-bar__right" style={{ display: 'flex', alignItems: 'center' }}>
       <img src={iconPlus.src} alt="Classroom addition" className="icon iconPlus" />
       <img src={iconMore.src} alt="Icon with all the other Google Apps" className="icon iconMore" />
-      <img src={userAvatar.src} alt="User Avatar" className="avatar" />
+      <img src={profileImageSrc} alt="User Avatar" className="avatar" />
 
       </div>
     </header>

@@ -23,9 +23,11 @@ interface ClassroomObject {
 
 export default function Home() {
   const [classroomObject, setClassroomObject] = useState<ClassroomObject[]>([]);
+  const [profileImageSrc, setProfileImageSrc] = useState<string>('');
 
   useEffect(() => {
       reloadList();
+      getProfileImageSrc();
   }, []);
 
   const reloadList = async () => {
@@ -36,6 +38,15 @@ export default function Home() {
         console.error("Erro ao realizar a requisição para a api. Detalhes:\n" + error);
       }
   };
+
+  const getProfileImageSrc = async () => {
+    try {
+      const response = await api.get("/classroom/profile-image/search?userId=????????");
+      setProfileImageSrc(response.data);
+    } catch (error) {
+      console.error("Erro ao realizar a requisição para a api. Detalhes:\n" + error);
+    }
+};
   
   const renderElement = () => {
     return (
@@ -58,7 +69,7 @@ export default function Home() {
 
   return (
     <div className="App">
-      <Header />  {/* Barra superior */}
+      <Header profileImageSrc={profileImageSrc} />  {/* Barra superior */}
       <Sidebar /> {/* Barra lateral */}
       
       <main className="main-content">
